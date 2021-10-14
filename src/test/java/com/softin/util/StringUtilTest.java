@@ -18,4 +18,9 @@ public class StringUtilTest {
     public void repeat_string_multiple_times() {
         Assert.assertEquals("HolaHolaHola", StringUtil.repeat("Hola", 3));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void repeat_string_negative_times() {
+        StringUtil.repeat("Hola", -1);
+    }
 }
