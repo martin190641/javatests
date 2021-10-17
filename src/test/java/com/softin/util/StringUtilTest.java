@@ -23,4 +23,25 @@ public class StringUtilTest {
     public void repeat_string_negative_times() {
         StringUtil.repeat("Hola", -1);
     }
+
+    @Test
+    public void string_is_not_empty() {
+        Assert.assertFalse(StringUtil.isEmpty("hola mundo!"));
+    }
+
+    @Test
+    public void empty_qoute_is_string_empty() {
+        Assert.assertTrue(StringUtil.isEmpty(""));
+    }
+
+    @Test
+    public void null_is_string_empty() {
+        Assert.assertTrue(StringUtil.isEmpty(null));
+    }
+
+    @Test
+    public void string_spaces_is_string_empty() {
+        Assert.assertTrue(StringUtil.isEmpty("  "));
+    }
+
 }
